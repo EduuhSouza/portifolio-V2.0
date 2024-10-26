@@ -1,0 +1,784 @@
+@charset "utf-8";
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width: 15px;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--vermelho);
+}
+
+
+/* ROOT CORES */
+:root {
+    --vermelho-dark: #a80000a8;
+    --vermelho: #ff0000dc;
+    --cinza: #353434;
+}
+
+
+/* formatação padrao */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Asap", sans-serif;
+}
+
+
+/* CORPO */
+body{
+    background: black;
+    transition: all .5s ease-in-out;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/*---------LOGO NAVBAR ----------  */
+
+
+/* CABEÇALHO NAVBAR*/
+
+header{
+    max-height: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 20px 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    align-items: center;
+    z-index: 9;
+
+}
+
+.logo-img img{
+    /* z-index: 900000000; */
+    margin-top: 5em;
+    width: 60%;
+    padding-right: 30%;
+    transition: all 1s;
+}
+
+
+.navbar a {
+    position: relative;
+    margin-left: 2em;
+    font-size: 1em;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 10px black;
+    transition: all .5s ease-in-out;
+}
+
+.navbar a:hover{
+   color: var(--vermelho);
+}
+
+/* ANIMAÇÃO NAVBAR TEXTO */
+
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* FIM ANIMAÇÃO NAVBAR TEXTO */
+/* --------FINAL BOTÃO NAVBAR */
+
+
+/* MENU MOBILE */
+
+.menu-mobile{
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+
+/* CONFIG MENU ABRIR */
+.menu-mobile.abrir-menu{
+width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+/* ANIMAÇÃO NAVBAR TEXTO */
+
+.menu-mobile nav a{
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.8em;
+    padding: 20px 10%;
+    display: block;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.menu-mobile nav a:hover{
+    background-color: var(--vermelho);
+    color: black;
+}
+
+/* BOTAO DE FECHAR O MOBILE */
+
+.menu-mobile .btn-fechar{
+    padding: 10px 4%;
+}
+
+.menu-mobile .btn-fechar i{
+color: var(--verde-claro);
+font-size: 2.5em;
+cursor: pointer;
+transition: all .5s;
+display: flex;
+justify-content: end;
+}
+
+.menu-mobile .btn-fechar i:hover{
+    color: red;
+}
+
+/* BOTAO ABRIR MENU */
+.btn-abrir-menu i{
+    color: white;
+    font-size: 40px;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all .5s;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+.btn-abrir-menu i:hover{
+    color: black;
+}
+
+
+/* OVERLAY MENU */
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* FORMATAÇÃO CELULAR HEADER E MENU MOBILE */
+
+@media screen and (max-width: 1020px) {
+
+    /* MENU MOBILE */
+
+    .navbar{
+        display: none;
+    }
+
+    .btn-abrir-menu i{
+        color: white;
+        font-size: 40px;
+        visibility: visible;
+        display: flex;
+        justify-content: end;
+        text-align: end;
+    }
+
+   
+.logo-img img{
+    margin-top: 9em;
+    width: 100%;
+    padding-right: 30%;
+    transition: all 1s;
+}
+
+
+    }
+    
+
+
+/* FIM MOBILE */
+
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section{
+    top: 0;
+    left: 1;
+
+}
+
+.darkmode label{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+
+.darkmode input{
+    position: absolute;
+    opacity: 0;
+    
+}
+
+/* ------------icones---------- */
+#sun{
+    position: absolute;
+    font-size: 2em;
+    color: gold;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.644));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun{
+    transition-delay: .8s ;
+    transform: scale(1) rotate(360deg);
+}
+
+#moon{
+    font-size: 2em;
+    color: gray;
+    filter: drop-shadow(0 0 2px rgba(0, 0 ,0, .5));
+    transition: 1s ease;
+
+}
+
+.darkmode input:checked~#moon{
+    transition-delay: 0s ;
+    transform: rotate(360deg) scale(0);
+}
+
+/*--------final icones------------- */
+
+.toggle{
+    margin-left: -25%;
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 1s;
+}
+
+
+/* DARKMODE FORMATAÇÃO FIM*/
+
+/* DARKMODE CORPO */
+.dark-mode{
+    background: linear-gradient(90deg, white, rgba(255, 0, 0, 0.575));
+}
+
+
+/* SOBRE CONTENT*/
+
+.main-container{
+    
+    margin-top: 10em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: 2em;
+}
+
+.content p{
+    font-size: 1.2em;
+}
+
+.content h1 span{
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--vermelho);
+    color: var(--vermelho);
+    font-size: 1.4em;
+}
+
+/*ICONES SOCIAIS  */
+
+.icons-social{
+    margin-top: 2em;
+}
+
+.icons-social i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--vermelho-dark);
+    border-radius: 50%; 
+    color: var(--vermelho);
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: all 0.2s linear;
+}
+
+.icons-social i:hover{
+    scale: 1.3;
+    filter: drop-shadow(0 0 10px var(--vermelho));
+    color: black;
+    background-color: var(--vermelho);
+}
+
+/* FORMATAÇÃO BOTAO CURRICULUM */
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: var(--vermelho);
+    color: white;
+    border: none;
+    font-size: 120%;
+    outline: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: var(--vermelho);
+    border: 2px solid var(--vermelho);
+    background: transparent;
+    font-weight: 700;
+    box-shadow:  0 0 40px 5px var(--vermelho);
+}
+
+
+/* FORMATAÇÃO IMAGEM */
+.main-container .img-foto img{
+    width: 400px;
+    height: 70vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--vermelho);
+    z-index: 1;
+}
+
+.main-container .img-foto:hover{
+    animation: animate 3s ease-in-out infinite;
+}
+
+/* CONTEINER 2 SOFT SKILLS E HARD SKILLS */
+
+.conteiner-2{
+    margin-top: 4em;
+    border-top: solid var(--vermelho);
+}
+
+/* TITULOS */
+.titulo-soft{
+    margin-top: 2em;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+/* ICONS */
+
+.icon{
+    text-align: center;
+    color: var(--vermelho);
+    border-bottom: solid var(--vermelho);
+}
+
+.icon i{
+    padding: .3em;
+    border: solid var(--vermelho);
+    font-size: 5em;
+    margin: .7em;
+    transition: all .5s ease-in-out;
+}
+
+
+.icon i:hover{
+    border-radius: 10px;
+    padding: .5em;
+}
+
+.icon p{
+    color: var(--vermelho);
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+
+/* ANIMAÇÃO FOTO */
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }  
+
+    50%{
+        scale: 1.2;
+    }  
+
+    100%{
+        scale: 1;
+    }   
+}
+
+/* FORMATAÇÃO CELULAR */
+
+@media (max-width:884px) {
+    .main-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .main-container .content{
+        margin-top: 2em;
+        width: 80%;
+    }
+
+    .icon i{
+        font-size: 6em;
+
+    }
+
+    .main-container{
+     text-align: center;    
+    }
+
+}
+
+  /* PARALLAX */
+
+.wrapper{
+width: 100%;
+margin: 0;
+margin: auto;
+}
+
+
+.container{
+width: 100%;
+max-width: 100%;
+margin: 0 auto;
+padding: 0;
+}
+
+
+section.modulo h3{
+margin-bottom: 20px;
+font-size: 3em;
+text-align: center;
+color: var(--vermelho);
+}
+
+section.modulo.content{
+padding: 40px 0;
+background: rgb(0, 0, 0);
+
+}
+
+section.modulo.parallax{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100vh;
+width: 100%;
+position: relative;
+overflow: hidden;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+section.modulo.parallax:after{
+content: "";
+height: 100%;
+width: 100%;
+z-index: 8; 
+position: absolute;
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 50%, rgb(0, 0, 0)) ;
+
+}
+
+section.modulo.parallax-1{
+background-image: url(fotos/wallpaper1.jpeg)
+}
+
+section.modulo.parallax-2{
+background-image: url(https://t4.ftcdn.net/jpg/05/74/02/81/360_F_574028124_tYSIFB1fXT2qo0AcKwaLTdZFVqLtnJ53.jpg)
+}
+
+
+/* projetos------------------------- */
+
+.container-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 8em;
+}
+
+.box-pr{
+    margin: 1em;
+    background-color: var(--vermelho);
+    width: 30%;
+    padding: 2em;
+    border-radius: 2em;
+    box-shadow: 0 0 10px var(--vermelho);
+    transition: all .5s ease-in-out;
+}
+
+.box-pr:hover{
+    background-color: transparent;
+    box-shadow: 0 0 10px var(--vermelho);
+}
+
+.img-pr img{
+    width: 100%;
+    border-radius: 1em;
+    margin-bottom: 5em;
+}
+
+
+.box-pr a{
+
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    background-color: black;
+    color: var(--vermelho);
+    padding: .5em;
+    border-radius: 1em;
+    transition: all .5s ease-in-out;
+}
+
+.box-pr a:hover{
+    border: solid red;
+    color: red;
+    box-shadow: 0 0 10px var(--vermelho);
+}
+
+@media (max-width:884px) {
+    
+    .box-pr{
+        width: 90%;
+
+    }
+
+
+/* PROJETOS */
+.container-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+}
+
+
+/* CURSOS */
+
+.titulo-curso{
+    text-align: center;
+    color: white;
+}
+
+.cursos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.box-cursos{
+    margin: 1em;
+    width: 40%;
+    border: solid var(--vermelho-dark);
+    margin-top: 2em;
+    padding: 1em;
+    transition: all .8s ease-in-out;
+
+}
+
+.box-cursos:hover{
+    width: 45%;
+    background: linear-gradient(90deg, black, var(--vermelho-dark));
+    box-shadow: 0 0 20px var(--vermelho-dark);
+}
+
+.data i{
+    margin: .8em;
+    color: var(--vermelho-dark);
+}
+
+.curso-t h3{
+font-size: 2em;
+}
+
+@media (max-width:884px) {
+    .cursos{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+    }
+
+    .box-cursos{
+        width: 90%;
+    }
+
+    .box-cursos:hover{
+        width: 100%;
+        
+    }
+}
+
+
+
+
+/* ----FOOOTEEEEEERRRR-------- */
+
+footer{
+    background-color: black;
+}
+
+.footer-container{
+    margin-top: 5em;
+    width: 100%;
+    padding: 70px 30px 20px;
+    box-shadow: 0 0 30px white;
+}
+
+.social-icons{
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.social-icons a:hover{
+    transform: translateY(-10px);
+}
+
+.social-icons i{
+    text-decoration: none;
+    margin: 10px;
+    color: var(--vermelho);
+    font-size: 3em;
+    transition: all .5s;
+}
+
+.social-icons i:hover{
+    color: white;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav i{
+  font-size: 2em;
+}
+
+.footerNav a{
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--vermelho);
+    padding: 10px;
+    margin: 15px ;
+    transition: all .5s ease-in-out;
+}
+
+.footerNav a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.footer-bottom{
+    color: #ffffff;
+    background: linear-gradient(50deg, black,black,var(--vermelho-dark),black, black, black);
+    font-size: 1em;
+    padding: 2em;
+    text-align: center;
+}
+
+
+/* MEDIA -------- */
+@media (max-width: 884px) {
+
+/* footer----------- */
+    .footer-container{
+       text-align: center;
+        width: 100%;
+    }
+
+    .social-icons{
+        width: 100%;
+        text-align: center;
+        
+    }
+ 
+    .footerNav{
+        flex-direction: column;
+    }
+    
+    .footerNav a{
+        width: 100%;
+        text-align: center;
+        margin: 10px 40px;
+       
+    }
+}

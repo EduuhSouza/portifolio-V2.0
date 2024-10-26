@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="shortcut icon" href="fotos/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Google Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- javascript MENU MOBILE -->
+<script src="menu.js" defer></script>
+    <!-- FIM javascript MENU MOBILE -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduarda Souza</title>
+</head>
+<body>
+
+
+
+    
+    <header class="header">
+        <div class="logo-img">
+        <img src="fotos/logo.png" alt="">
+    </div>
+
+        <!-- DARKMODE   -->
+        <section class="darkmode">
+
+            <label>
+                <input id="check" type="checkbox" id="check">
+        
+                <i class="fa-solid fa-sun" id="sun"></i>
+                <i class="fa-solid fa-moon" id="moon"></i>
+        
+                <span class="toggle"></span>
+            </label>
+        
+        </section>
+    
+        <script>
+            const check = document.getElementById('check');
+        
+            check.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            })
+        
+        
+        </script>
+
+    <nav class="navbar">
+       
+        <a href="#inicio"> Inicio </a>
+        <a href="#contato"> Contato </a>
+        <a href="#projetos"> Projetos </a>
+        <a href="#habilidades"> Habilidades </a>
+    </nav>
+
+
+    
+<!-- MOBILE -->
+
+<div class="btn-abrir-menu" id="btn-menu"> <!-- COMEÇO ABRIR MENU -->
+    <i class="fa-solid fa-bars"></i>
+</div> <!-- FINAL ABRIR MENU -->
+
+
+<div class="menu-mobile" id="menu-mobile"> <!-- COMEÇO MENU MOBILE-->
+    <div class="btn-fechar">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <nav class="mobile-nav">  <!-- COMEÇO NAVBAR MENU -->
+        
+        <a href="#inicio"> Inicio </a>
+        <a href="#contato"> Contato </a>
+        <a href="#projetos"> Projetos </a>
+        <a href="#habilidades"> Habilidades </a>
+
+    </nav> <!-- FINAL NAVBAR MENU -->
+    
+</div> <!-- FINAL MENU MOBILE-->
+<div class="overlay-menu" id="overlay-menu"></div>
+
+<!-- FIM MOBILE -->
+
+</header>
+
+<div class="main-container">
+
+    <div class="content">
+        <h1> Olá, eu sou <span> Eduarda Souza</span></h1>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem unde perspiciatis dolore, est quae minima architecto quas. Beatae vitae officia saepe nesciunt excepturi provident repellendus assumenda. Asperiores, a aperiam. Recusandae!</p>
+    
+
+    <!-- ICONES -->
+    <div class="icons-social">
+        <a href="https://www.linkedin.com/in/eduarda-souza-3157942b0/" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+
+        <a href="https://www.instagram.com/souza.eduuh/" class="icon2"> <i class="fa-brands fa-instagram"></i></a>
+
+        <a href="https://github.com/EduuhSouza" class="icon3"> <i class="fa-brands fa-github"></i></a>
+    </div>
+    
+
+    <div class="btn-cv">
+    <button > Download CV</button>
+</div>
+</div>
+
+    <!-- IMAGEM FOTO -->
+    <div class="img-foto">
+        <img src="fotos/foto.perfil.jpeg" alt="">
+    </div>
+</div>
+
+<!-- SOFTSKILLS -->
+<div class="conteiner-2">
+
+    <div class="titulo-soft">
+        <h2> Soft Skills </h2>
+    </div>
+
+    <div class="icon">
+        <i class="fa-solid fa-comments">
+            <p>Comunicação</p></i>
+
+        <i class="fa-solid fa-people-group"><p>Trabalho em grupo</p></i>
+
+        <i class="fa-solid fa-arrows-to-circle">
+            <p>Foco</p></i>
+
+        <i class="fa-solid fa-lightbulb">
+            <p>Criatividade</p></i>
+
+  <i class="fa-solid fa-clipboard-check">
+    <p>Organização</p></i>
+
+    </div>
+</div>
+
+<!-- HARD SKILLS -->
+    <div class="titulo-soft">
+        <h2> Hard Skills </h2>
+    </div>
+
+    <div class="icon">
+
+        <i class="fa-brands fa-html5">
+            <p>HTML5</p>
+        </i>
+
+        <i class="fa-brands fa-css3-alt">
+            <p>CSS3</p>
+        </i>
+
+        <i class="fa-brands fa-js">
+            <p>JavaScript</p>
+        </i>
+
+        <i class="fa-brands fa-php">
+            <p>PHP</p>
+        </i>
+        
+        <i class="fa-brands fa-bootstrap">
+            <p>Bootstrap</p>
+        </i>
+
+        <i class="fa-brands fa-figma">
+            <p>Figma</p>
+        </i>
+
+    </div>
+
+</div>
+
+<!-- PARALLAX -->
+
+<div class="wrapper">
+        <section class="modulo parallax parallax-1">        
+        </section>
+
+        <section class="modulo content">
+            <div class="container">
+                <h3> "Sonhos exigem paciência no resultado e dedicação no processo" </h3>
+                
+            </div>
+    </section>
+    
+
+ <!-- PROJETOS------------ -->
+ 
+<div class="container-box">
+
+    <!-- DESIGN -->
+
+    <div class="box-pr">
+
+        <div class="img-pr">
+        <img src="https://ied.edu.br/news/19019/image-thumb__19019__scaleByWidth1000/Design%20Gr%C3%A1fico%20e%20Digital%20do%20IED%20SP_1.png" alt="">
+    </div>
+    
+        <a href=""> Design</a>
+    </div>
+    
+    
+    <!-- HTML E CSS -->
+    <div class="box-pr">
+
+        <div class="img-pr">
+        <img src="https://ied.edu.br/news/19019/image-thumb__19019__scaleByWidth1000/Design%20Gr%C3%A1fico%20e%20Digital%20do%20IED%20SP_1.png" alt="">
+    </div>
+
+    <a href=""> HTML e CSS</a>
+    </div>
+    
+
+    <!-- JS -->
+    <div class="box-pr">
+
+        <div class="img-pr">
+        <img src="https://ied.edu.br/news/19019/image-thumb__19019__scaleByWidth1000/Design%20Gr%C3%A1fico%20e%20Digital%20do%20IED%20SP_1.png" alt="">
+    </div>
+
+    <a href=""> JavaScript</a>
+    </div>
+</div>
+
+
+<!-- PARALLAX -->
+
+<div class="wrapper">
+    <section class="modulo parallax parallax-2">        
+    </section>
+
+    <section class="modulo content">
+        <div class="container">    
+        </div>
+</section>
+
+
+<!-- CURSOS E DESENVOLVIMENTO -->
+
+
+    <div class="titulo-curso">
+        <h1>Cursos e Formações</h1>
+    </div>
+
+    <!-- PAO -->
+    <div class="cursos">
+    <div class="box-cursos">
+        <div class="data">
+            <p> <i class="fa-regular fa-clock"></i> 2024 - Atual</p>
+        </div>
+        <div class="curso-t">
+            <h3>Manutenção de Computadores</h3>
+            <p>Fundação O Pão dos Pobres Santo Antônio</p>
+        </div>
+    </div>
+
+    <!-- UNISINOs -->
+    <div class="box-cursos">
+        <div class="data">
+            <p> <i class="fa-regular fa-clock"></i> 2024 - Atual</p>
+        </div>
+
+        <div class="curso-t">
+            <h3>Faculdade de Marketing</h3>
+            <p>Universidade do Vale do Rio dos Sinos</p>
+        </div>
+    </div>
+
+</div>
+
+    <div class="cursos">
+       <!-- IOS -->
+       <div class="box-cursos">
+        <div class="data">
+            <p> <i class="fa-regular fa-clock"></i> 2023-2024</p>
+        </div>
+
+        <div class="curso-t">
+            <h3>Desenvolvimento Full Stack</h3>
+            <p>Instituto da Oportunidade Social</p>
+        </div>
+    </div>
+
+    <!-- ENJOY -->
+    <div class="box-cursos">
+        <div class="data">
+            <p> <i class="fa-regular fa-clock"></i> 2021 - 2021</p>
+        </div>
+
+        <div class="curso-t">
+            <h3>Marketing Digital</h3>
+            <p>Enjoy</p>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<!-- FOOTER----------------- -->
+
+
+<div class="footer-container">
+
+    <div class="social-icons">
+        <div class="social-icon">
+            <a href="https://www.linkedin.com/in/eduarda-souza-3157942b0/" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+
+            <a href="https://github.com/EduuhSouza" class="icon3"> <i class="fa-brands fa-github"></i></a>
+
+            <a href="https://www.instagram.com/souza.eduuh/" class="icon2"> <i class="fa-brands fa-instagram"></i></a>
+        
+    </div>
+
+    <div class="footerNav" id="contato">
+        <a href=""> 
+            <i class="fa-solid fa-envelope"></i> eduardasouzak4@gmail.com </a>
+            <a href="index.html"> inicio </a>
+
+    </div>
+    <div class="footer-bottom">
+        Desenvolvido por Eduarda Souza | &real; 2024
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>
