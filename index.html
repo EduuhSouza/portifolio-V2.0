@@ -5,6 +5,10 @@
     <link rel="shortcut icon" href="fotos/logo.png">
     <link rel="stylesheet" href="style.css">
 
+<!-- DATA AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- ICONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -95,7 +99,7 @@
 
 </header>
 
-<div class="main-container" id="inicio">
+<div class="main-container" id="inicio" data-aos="fade-up">
 
     <div class="content">
         <h1> Olá, eu sou <span> Eduarda Souza</span></h1>
@@ -125,7 +129,8 @@
 </div>
 
 <!-- SOFTSKILLS -->
-<div class="conteiner-2" id="habilidades">
+<div class="conteiner-2" id="habilidades" data-aos="fade-up"
+data-aos-duration="3000">
 
     <div class="titulo-soft">
         <h2> Soft Skills </h2>
@@ -200,7 +205,8 @@
 
  <!-- PROJETOS------------ -->
  
-<div class="container-box" id="projetos">
+<div class="container-box" id="projetos" data-aos="fade-up"
+data-aos-duration="3000">
 
     <!-- DESIGN -->
 
@@ -365,6 +371,10 @@
   new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 
+
+<script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
