@@ -222,11 +222,12 @@ justify-content: end;
 
    
 .logo-img img{
-    margin-top: 9em;
-    width: 100%;
+    margin-top: 5em;
+    width: 80%;
     padding-right: 30%;
     transition: all 1s;
 }
+
 
 
     }
@@ -270,6 +271,8 @@ justify-content: end;
     font-size: 1.4em;
 }
 
+
+
 /*ICONES SOCIAIS  */
 
 .icons-social{
@@ -280,8 +283,8 @@ justify-content: end;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5em;
+    height: 2.5em;
     background-color: transparent;
     border: 0.2rem solid var(--vermelho-dark);
     border-radius: 50%; 
@@ -300,10 +303,16 @@ justify-content: end;
 
 /* FORMATAÇÃO BOTAO CURRICULUM */
 
+.content button a{
+    text-decoration: none;
+    color: white;
+}
+
 .content button{
     width: 50%;
-    height: 6vh;
+    height: 8vh;
     margin: 30px;
+    padding: 1.4em;
     background-color: var(--vermelho);
     color: white;
     border: none;
@@ -326,8 +335,8 @@ justify-content: end;
 
 /* FORMATAÇÃO IMAGEM */
 .main-container .img-foto img{
-    width: 400px;
-    height: 70vh;
+    width: 90%;
+    height: 60vh;
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0 0 50px var(--vermelho);
@@ -556,9 +565,17 @@ background-image: url(https://t4.ftcdn.net/jpg/05/74/02/81/360_F_574028124_tYSIF
 }
 
 
-/* CURSOS */
+/* CURSOS e TRABALHOS*/
 
 .titulo-curso{
+    text-align: center;
+    color: white;
+}
+
+.titulo-trabalho{
+    padding: 1em;
+    border-top: solid var(--vermelho);
+    margin-top: 5em;
     text-align: center;
     color: white;
 }
