@@ -262,7 +262,7 @@ window.addEventListener("load", () => {
   
     // Texto depois do "Inicializando sistema..."
     setTimeout(() => {
-      introText.innerText = "Olá, eu sou a Luma";
+      introText.innerText = "Olá, eu sou a Luma...";
       introText.style.animation = "none";
       void introText.offsetWidth; // reinicia animação
       introText.style.animation = "typing 3s steps(40, end) forwards, blink 0.8s step-end infinite";
@@ -276,6 +276,5 @@ window.addEventListener("load", () => {
       }, 1000);
     }, 8000);
   });
-  
   
   

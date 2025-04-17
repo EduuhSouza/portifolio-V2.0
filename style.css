@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/* FONTES */
+@font-face {
+    font-family: intro;
+    src: url(fontes/CallingCode-Regular.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -42,7 +48,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    font-family: sans-serif;
+    font-family: intro;
     transition: opacity 1s ease-in-out;
   }
   
@@ -56,6 +62,7 @@
   }
   
   .typing-text {
+    font-family: intro;
     font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
@@ -66,7 +73,7 @@
   
   @keyframes typing {
     to {
-      width: 18ch; /* Ajuste para a frase */
+      width: 24ch; /* Ajuste para a frase */
     }
   }
   
@@ -240,6 +247,46 @@ display: block;
     background: var(--roxo-claro);
     /* border-radius: 15px; */
 }
+
+/* ANIMAÇÃO PARA O BOTÃO DE ÁUDIO */
+.chat-form .chat-controls #mic-btn {
+    background: var(--cinza);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chat-form .chat-controls #mic-btn:hover{
+    background: var(--roxo-claro);
+}
+
+/* Efeito de "pulse" para indicar que o microfone está ativo */
+.chat-form .chat-controls #mic-btn.recording {
+    animation: pulse 1s infinite;
+    background: var(--amarelo);
+    color: var(--background);
+}
+
+/* ANIMAÇÃO DO PULSO */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
 /* FORMATAÇÃO IMG */
 .chat-form .file-upload-wrapper{
