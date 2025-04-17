@@ -41,8 +41,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/*---------LOGO NAVBAR ----------  */
-
 
 /* CABEÇALHO NAVBAR*/
 
@@ -250,7 +248,7 @@ justify-content: end;
 
 .ferramentas{
     text-align: center;
-    margin-top: 15em;
+    margin-top: 2em;
     display: flex;
 }
 
@@ -259,7 +257,7 @@ justify-content: end;
 .box-ferramentas{
 margin-top: 2em;
 color: white;
-padding: 2em;
+padding: 3em;
 margin: 3em;
 text-align: center;
 font-size: 1.2em;
