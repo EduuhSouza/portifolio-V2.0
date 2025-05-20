@@ -1,3 +1,5 @@
+/* GALERIA DE FOTOS FEITA COM O APOIO DO CHATGPT */
+
 @charset "utf-8";
 
 
@@ -42,6 +44,46 @@ html {
 }
 
 
+/* Intro */
+/* .intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    animation: fadeOutIntro 1s ease 3s forwards;
+}
+
+.intro-logo img {
+     width: 70%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.intro-texto {
+    font-size: 20px;
+    font-family: "Asap", sans-serif;
+} */
+
+/* Animação para esconder intro */
+@keyframes fadeOutIntro {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
 /* CABEÇALHO NAVBAR*/
 
 header{
@@ -63,7 +105,7 @@ header{
 
 .logo-img img{
     /* z-index: 900000000; */
-    margin-top: 5em;
+    margin-top: 1em;
     width: 60%;
     padding-right: 30%;
     transition: all 1s;
@@ -181,15 +223,6 @@ justify-content: end;
     text-align: end;
 }
 
-/* DARkMODE */
-.dark-mode .btn-abrir-menu i{
-    color: red;
-}
-
-.btn-abrir-menu i:hover{
-    color: var(--vermelho);
-}
-
 
 /* OVERLAY MENU */
 
@@ -208,6 +241,13 @@ justify-content: end;
 
 @media screen and (max-width: 1020px) {
 
+    .logo-img img{
+    margin-top: 3em;
+    width: 70%;
+    /* padding-right: 30%; */
+    transition: all 1s;
+}
+
     /* MENU MOBILE */
 
     .navbar{
@@ -222,15 +262,6 @@ justify-content: end;
         justify-content: end;
         text-align: end;
     }
-
-   
-.logo-img img{
-    margin-top: 9em;
-    width: 100%;
-    padding-right: 30%;
-    transition: all 1s;
-}
-
 
     }
     
@@ -247,88 +278,193 @@ justify-content: end;
 }
 
 .ferramentas{
-    text-align: center;
-    margin-top: 2em;
+    margin-top: 3em;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: rgb(35, 35, 35);
+    box-shadow: inset 1px 1px 5px 1px rgb(0, 0, 0);
+    border-radius: 5%;
+    margin-bottom: 4em;
 }
 
 
 /* IMAGENS */
-.box-ferramentas{
-margin-top: 2em;
-color: white;
-padding: 3em;
-margin: 3em;
-text-align: center;
-font-size: 1.2em;
-transition: all .7s ease-in-out;
+.ferramentas {
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
-.box-ferramentas:hover{
-box-shadow: 0 0 10px var(--vermelho);
-background: linear-gradient(90deg, var(--vermelho-dark), black);
-border-radius: 4em 1em;
+.box-ferramentas img {
+    width: 60%;
+    padding: 1em;
+    max-width: 250px;
+    border-radius: 50%;
 }
 
-.ferramentas img{
-    width: 30%;
-    margin-bottom: 3em;
+/* MOBILE */
+@media (max-width: 768px) {
+    .titulo-ferramentas{
+    margin-top: 13em;
+
 }
+    .box-ferramentas img {
+        width: 100%;
+    }
+}
+
+
+
 
 
 /* SOBRE */
 .sobre{
+
     text-align: center;
     color: white;
     border: solid var(--vermelho-dark);
     box-shadow: -10px 10px var(--vermelho);
-    padding: 5em;
+    padding: 2em;
     margin: 2em;
     font-size: 1.3em;
 }
-  
 
-/* GALERIA */
-
-   .galeria-h1{
-    margin-top: 5em;
-    text-align: center;
-    color: white;
-}
- 
-.container-galeria{
-    border-top: solid var(--vermelho);
-        display: flex;
-        justify-content: center; 
-        align-items: center;    
-        padding: 50px 8%;
-        margin: 0 auto;
-        min-height: 100vh;
-}
- 
-.foto-galeria {
-
-    width: 80%;             
-    max-width: 1000px;       
-    column-count: 3;          
-    column-gap: 10px;         
-    padding: 10px;
-    
+/* ===== GALERIA ===== */
+.galeria-h1 {
+  color: white;
+  text-align: center;
+  border-top: solid red;
+  padding: 2em 1em;
+  margin-top: 5em;
+  font-size: 2em;
 }
 
-/* Estilos das imagens */
-.foto-galeria img {
+.galeria-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.imagem-central {
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-central img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.miniaturas-laterais-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.miniaturas-laterais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 420px;
+  padding-right: 6px;
+  scroll-behavior: smooth;
+}
+
+.miniaturas-laterais img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.miniaturas-laterais img:hover,
+.miniaturas-laterais img.ativo {
+  transform: scale(1.05);
+  opacity: 1;
+  border: 2px solid #fff;
+}
+
+.seta {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.seta:hover {
+  transform: scale(1.2);
+}
+
+
+/* ========== MOBILE RESPONSIVO ========== */
+@media (max-width: 768px) {
+  .galeria-horizontal {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .imagem-central {
     width: 100%;
-    opacity: 0.5;           
-    transition: opacity 0.5s ease-in-out; 
-    border-radius: 10px;      
-    margin-bottom: 10px;      
+    aspect-ratio: 4 / 3;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .miniaturas-laterais-wrapper {
+    flex-direction: row;
+    max-width: 100%;
+    overflow-x: auto;
+    max-height: none;
+    padding: 1em 0;
+  }
+
+  .miniaturas-laterais {
+    flex-direction: row;
+    max-height: none;
+    max-width: 100%;
+    overflow-x: auto;
+    padding-right: 0;
+    gap: 8px;
+  }
+
+  .miniaturas-laterais img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .seta-cima,
+  .seta-baixo {
+    display: none;
+  }
 }
 
-.foto-galeria img:hover {
-    opacity: 1; 
-}
-
+  
 
 /* ----FOOOTEEEEEERRRR-------- */
 
