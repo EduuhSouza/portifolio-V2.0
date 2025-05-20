@@ -218,6 +218,7 @@ justify-content: end;
         display: flex;
         justify-content: end;
         text-align: end;
+        margin-right: 1em;
     }
 
    
