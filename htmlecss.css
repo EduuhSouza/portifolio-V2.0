@@ -183,15 +183,6 @@ justify-content: end;
     text-align: end;
 }
 
-/* DARkMODE */
-.dark-mode .btn-abrir-menu i{
-    color: red;
-}
-
-.btn-abrir-menu i:hover{
-    color: var(--vermelho);
-}
-
 
 /* OVERLAY MENU */
 
@@ -211,8 +202,7 @@ justify-content: end;
 @media screen and (max-width: 1020px) {
 
     /* MENU MOBILE */
-
-    .navbar{
+   .navbar{
         display: none;
     }
 
@@ -223,95 +213,153 @@ justify-content: end;
         display: flex;
         justify-content: end;
         text-align: end;
+        margin-right: 1em;
     }
 
    
 .logo-img img{
-    margin-top: 9em;
-    width: 100%;
+    margin-top: 5em;
+    width: 80%;
     padding-right: 30%;
     transition: all 1s;
 }
-
-
     }
     
-
-
 /* FIM MOBILE */
 
+/* SOBRE */
 
-/* FORMATAÇÃO BOTAO DARKMODE */
-section{
-    top: 0;
-    left: 1;
+.sobre{
+    margin-top: 15em;
+    text-align: center;
+    color: white;
+}
+
+.sobre-box{
+    border: solid var(--vermelho);
+    padding: 3em;
+    margin: 4em;
+}
+
+.sobre-box h1{
+    font-size: 2.3em;
+}
+
+.sobre-box p{
+    font-size: 1.2em;
+}
+
+/* FERRAMENTAS */
+.ferramentas{
+    text-align: center;
+    color: white;
 
 }
 
-.darkmode label{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-
+.pr{
+    border-top: solid var(--vermelho);
+    padding: 2em;
+    margin-top: 10em;
+    color: white;
+    text-align: center;
 }
 
+.box-ferramentas{
+    background-color: var(--cinza);
+    box-shadow: 0 0 10px 10px var(--cinza);
+    padding: 1em;
+}
 
-.darkmode input{
-    position: absolute;
-    opacity: 0;
+.box-ferramentas svg{
+    margin-top: 2em;
+    margin-left: 4em;
+}
+
+/* FORMATAÇÃO CARDS */
+
+.wrapper{
+    padding: 10px 10%;
+}
+
+#card-area{
+    padding: 50px 0;
+}
+
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.box{
     
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px var(--cinza);
 }
 
-/* ------------icones---------- */
-#sun{
-    position: absolute;
-    font-size: 2em;
-    color: gold;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.644));
-    transform: scale(0);
-    transition: 1s ease;
-}
-
-.darkmode input:checked~#sun{
-    transition-delay: .8s ;
-    transform: scale(1) rotate(360deg);
-}
-
-#moon{
-    font-size: 2em;
-    color: gray;
-    filter: drop-shadow(0 0 2px rgba(0, 0 ,0, .5));
-    transition: 1s ease;
-
-}
-
-.darkmode input:checked~#moon{
-    transition-delay: 0s ;
-    transform: rotate(360deg) scale(0);
-}
-
-/*--------final icones------------- */
-
-.toggle{
-    margin-left: -25%;
-    position: absolute;
+.box img{
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    z-index: -1;
-    transition: 1s;
+    transition: transform .5s;
 }
 
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, black 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height .5s;
+}
 
-/* DARKMODE FORMATAÇÃO FIM*/
+.overlay h3{
+font-weight: 500;
+margin-bottom: 5px;
+margin-top: 80%;
+font-size: 3em;
+letter-spacing: 2px;
+color: var(--vermelho);
+}
 
-/* DARKMODE CORPO */
-.dark-mode{
-    background: rgb(194,2,2);
-background: linear-gradient(195deg, rgba(194,2,2,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 91%);
+.overlay p{
+font-size: 1.2em;
+color: white;
+}
+
+.icons i{
+    margin-top: 1em;
+    margin-left: .5em;
+    color: var(--vermelho);
+    text-decoration: none;
+    font-size: 2em;
+    border-radius: 50px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+.icons i:hover{
+    color: white;
+}
+
+.box:hover img{
+    transform: scale(1.2);
+}
+
+.box:hover .overlay{
+    height: 100%;
 }
